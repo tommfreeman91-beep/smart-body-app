@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>Smart Body — Ксюша</title>
+<meta name="description" content="Smart Body — 8 бесплатных тренировок от Ксюши. Тест на готовность позаботиться о себе.">
+<meta name="theme-color" content="#171310">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- COVER SCREEN -->
+  <section class="screen screen-cover" data-screen="cover">
+    <div class="cover-media">
+      <img src="assets/cover.jpg" alt="Ксюша" class="cover-photo">
+      <div class="cover-gradient"></div>
+    </div>
+    <div class="cover-content safe-bottom">
+      <p class="eyebrow">Бесплатная программа</p>
+      <h1 class="cover-title">SMART BODY</h1>
+      <div class="frame-box">
+        <p>Это не курс. Это тест — насколько ты готова позаботиться о себе, даже когда тебе за это не платят и никто не проверяет.</p>
+      </div>
+      <p class="cover-text">8 бесплатных тренировок. Без записи, без оплаты, без «заплачу — тогда начну». Просто нажми play.</p>
+      <p class="cover-text cover-text-accent">Дошла до восьмой? Значит, ты из тех, кому можно предложить больше.</p>
+      <button class="btn btn-primary fallback-btn" id="btn-start" type="button">Начать</button>
+    </div>
+  </section>
+
+  <!-- TRAINING SCREEN (rendered dynamically) -->
+  <section class="screen" data-screen="training" id="screen-training" hidden>
+    <div class="training-header safe-top">
+      <p class="training-counter" id="training-counter">Тренировка 1 из 8</p>
+      <div class="progress-dots" id="progress-dots"></div>
+    </div>
+
+    <div class="training-body">
+      <h2 class="training-title" id="training-title"></h2>
+      <p class="training-lead" id="training-lead"></p>
+
+      <div class="video-wrap" id="video-wrap">
+        <div class="video-embed" id="video-embed"></div>
+      </div>
+      <a class="youtube-link" id="youtube-link" href="#" target="_blank" rel="noopener">Смотреть на YouTube ↗</a>
+    </div>
+
+    <div class="training-footer safe-bottom">
+      <button class="btn btn-primary fallback-btn" id="btn-next" type="button">Далее</button>
+    </div>
+  </section>
+
+  <!-- FINAL SCREEN -->
+  <section class="screen screen-final" data-screen="final" hidden>
+    <div class="cover-media">
+      <img src="assets/final.jpg" alt="Ксюша" class="cover-photo">
+      <div class="cover-gradient"></div>
+    </div>
+    <div class="cover-content safe-bottom">
+      <p class="eyebrow">Программа пройдена</p>
+      <h1 class="cover-title cover-title-sm">Ты дошла до конца</h1>
+      <div class="frame-box">
+        <p>Восемь тренировок — это не так просто, как кажется, когда рядом никто не стоит над душой. Но ты дошла.</p>
+      </div>
+      <p class="cover-text cover-text-accent">Дальше — то, ради чего всё это затевалось.</p>
+      <button class="btn btn-primary fallback-btn" id="btn-club" type="button">Хочу в клуб</button>
+    </div>
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
